@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Данные (изображения фасадов и промежуточные файлы)
+kfmf_facady_tolshina_images/
+*.csv
+*.xlsx
+*.code-workspace
