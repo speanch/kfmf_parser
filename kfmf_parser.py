@@ -294,7 +294,7 @@ def main():
 
     log("[3/4] Сбор моделей, толщины и картинок по разделам...")
     rows = []
-    EXCEL = "/home/sereg/personal-projects/kfmf_parser/kfmf_facady_tolshina.xlsx"
+    EXCEL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "kfmf_facady_tolshina.xlsx")
     IMAGES_ROOT = os.path.splitext(EXCEL)[0] + "_images"  # рядом с Excel
     for section_path, section_name in sections.items():
         if section_name in SKIP_SECTIONS:

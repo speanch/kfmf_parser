@@ -46,13 +46,6 @@ def api_key():
     key = os.getenv("OPENROUTER_API_KEY")
     if key:
         return key
-    env_path = os.path.join(BASE_DIR, "..", "t_bot", ".env")
-    if os.path.isfile(env_path):
-        with open(env_path, encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line.startswith("OPENROUTER_API_KEY="):
-                    return line.split("=", 1)[1].strip()
     print("Не найден OPENROUTER_API_KEY", file=sys.stderr)
     sys.exit(1)
 
